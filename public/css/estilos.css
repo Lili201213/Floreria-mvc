@@ -1,0 +1,858 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fffaf8;
+    color: #49383d;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(255, 245, 247, 0.88),
+            rgba(255, 250, 248, 0.94)
+        ),
+        radial-gradient(
+            circle at top left,
+            #f3c5d4,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #d9eadb,
+            transparent 40%
+        );
+
+    border-bottom: 1px solid #f0dce1;
+}
+
+.contenido-header {
+    max-width: 700px;
+    padding: 40px 20px;
+}
+
+.decoracion {
+    display: block;
+    font-size: 35px;
+    color: #b86b82;
+    margin-bottom: 10px;
+}
+
+.encabezado h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: normal;
+    color: #74394f;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.encabezado p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-style: italic;
+    color: #80656c;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.btn-registrar {
+    border: none;
+    background: #8f4862;
+    color: white;
+    padding: 14px 27px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(143, 72, 98, 0.20);
+
+    transition: all 0.3s ease;
+}
+
+.btn-registrar:hover {
+    background: #74394f;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(143, 72, 98, 0.28);
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 0 70px;
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.buscador {
+    background: #ffffff;
+    border: 1px solid #f0e0e3;
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin-bottom: 65px;
+
+    box-shadow: 0 8px 30px rgba(100, 65, 75, 0.06);
+}
+
+.titulo-seccion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.titulo-seccion > span {
+    font-size: 28px;
+}
+
+.titulo-seccion h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #74394f;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.titulo-seccion p {
+    color: #927b82;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   FORMULARIO DE BÚSQUEDA
+========================================= */
+
+.form-busqueda {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.campo-busqueda {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+
+    background: #fffafa;
+    border: 1px solid #ead9de;
+    border-radius: 11px;
+    padding-left: 15px;
+
+    transition: 0.3s ease;
+}
+
+.campo-busqueda:focus-within {
+    border-color: #c77b92;
+    box-shadow: 0 0 0 3px rgba(199, 123, 146, 0.10);
+}
+
+.campo-busqueda span {
+    font-size: 16px;
+}
+
+.campo-busqueda input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 13px 12px;
+    font-size: 15px;
+    color: #49383d;
+}
+
+.form-busqueda select {
+    min-width: 190px;
+    padding: 13px 15px;
+    border: 1px solid #ead9de;
+    border-radius: 11px;
+    background: #fffafa;
+    color: #49383d;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-buscar {
+    border: none;
+    border-radius: 11px;
+    padding: 13px 25px;
+    background: #b86b82;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-buscar:hover {
+    background: #963f60;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MENSAJE DE ÉXITO
+========================================= */
+
+.mensaje-exito {
+    max-width: 800px;
+    margin: -30px auto 45px;
+
+    background: #f0f8f1;
+    border: 1px solid #cde3d1;
+    color: #3f7048;
+
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(70, 120, 80, 0.06);
+}
+
+.mensaje-exito span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   ERRORES
+========================================= */
+
+.errores {
+    max-width: 800px;
+    margin: -30px auto 45px;
+
+    background: #fff3f4;
+    border: 1px solid #eccbd1;
+    color: #9b4659;
+
+    padding: 18px 22px;
+    border-radius: 12px;
+}
+
+.errores strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.errores ul {
+    padding-left: 20px;
+}
+
+.errores li {
+    margin: 4px 0;
+}
+
+
+/* =========================================
+   TÍTULO DEL CATÁLOGO
+========================================= */
+
+.titulo-catalogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.titulo-catalogo > span {
+    color: #b86b82;
+    font-size: 24px;
+}
+
+.titulo-catalogo h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: normal;
+    color: #74394f;
+}
+
+.titulo-catalogo p {
+    color: #927b82;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   CATÁLOGO
+========================================= */
+
+.contenedor-flores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.flor {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+
+    border: 1px solid #f0e0e3;
+
+    box-shadow:
+        0 7px 25px rgba(91, 58, 68, 0.07);
+
+    transition: all 0.35s ease;
+}
+
+.flor:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(91, 58, 68, 0.13);
+}
+
+
+/* =========================================
+   IMAGEN DE LA FLOR
+========================================= */
+
+.imagen-flor {
+    height: 270px;
+    overflow: hidden;
+    background: #f6ecef;
+}
+
+.imagen-flor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.flor:hover .imagen-flor img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   INFORMACIÓN DE LA FLOR
+========================================= */
+
+.info-flor {
+    padding: 23px;
+}
+
+.categoria {
+    display: inline-block;
+
+    background: #f8e8ed;
+    color: #a04d68;
+
+    padding: 5px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+
+    margin-bottom: 12px;
+}
+
+.flor h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #65384a;
+    margin-bottom: 9px;
+}
+
+.flor p {
+    color: #806d73;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 46px;
+}
+
+.precio {
+    margin-top: 17px;
+    padding-top: 15px;
+    border-top: 1px solid #f0e4e7;
+
+    color: #a24765;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   SIN RESULTADOS
+========================================= */
+
+.sin-resultados {
+    background: white;
+    border: 1px solid #f0e0e3;
+    border-radius: 18px;
+
+    text-align: center;
+    padding: 60px 20px;
+
+    box-shadow: 0 8px 25px rgba(100, 65, 75, 0.05);
+}
+
+.sin-resultados span {
+    display: block;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.sin-resultados h3 {
+    font-family: Georgia, serif;
+    color: #74394f;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.sin-resultados p {
+    color: #927b82;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background: rgba(63, 42, 49, 0.58);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+
+    z-index: 1000;
+}
+
+.modal.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   CONTENIDO DEL MODAL
+========================================= */
+
+.modal-contenido {
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background: #fffdfc;
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(45, 28, 34, 0.25);
+
+    transform: translateY(25px) scale(0.97);
+
+    transition: transform 0.3s ease;
+}
+
+.modal.activo .modal-contenido {
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================
+   CERRAR MODAL
+========================================= */
+
+.cerrar-modal {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f8e9ed;
+    color: #88445d;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.cerrar-modal:hover {
+    background: #eed4dc;
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   CABECERA DEL MODAL
+========================================= */
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.flor-modal {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.modal-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 29px;
+    font-weight: normal;
+    color: #74394f;
+}
+
+.modal-header p {
+    color: #927b82;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   FORMULARIO DEL MODAL
+========================================= */
+
+.form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.grupo-campo label {
+    color: #62414c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #e6d5da;
+    border-radius: 10px;
+
+    background: #fffafa;
+
+    color: #49383d;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    border-color: #bd7189;
+
+    box-shadow:
+        0 0 0 3px rgba(189, 113, 137, 0.10);
+
+    background: white;
+}
+
+.grupo-campo textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.grupo-campo small {
+    color: #a18d93;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PRECIO
+========================================= */
+
+.campo-precio {
+    position: relative;
+}
+
+.campo-precio span {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #9a6576;
+    font-weight: 600;
+}
+
+.campo-precio input {
+    padding-left: 38px;
+}
+
+
+/* =========================================
+   BOTONES DEL FORMULARIO
+========================================= */
+
+.acciones-formulario {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.btn-cancelar,
+.btn-guardar {
+    flex: 1;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 13px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-cancelar {
+    background: #f3eaec;
+    color: #76515e;
+}
+
+.btn-cancelar:hover {
+    background: #e9dde0;
+}
+
+.btn-guardar {
+    background: #9b506b;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background: #7f3d56;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+    background: #5c3947;
+    color: #f9e9ee;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.footer-flor {
+    font-size: 25px;
+    color: #e6a6ba;
+    margin-bottom: 8px;
+}
+
+footer h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #e7cbd4;
+    font-size: 14px;
+}
+
+.linea-footer {
+    width: 70px;
+    height: 1px;
+    background: #c98da1;
+
+    margin: 20px auto;
+}
+
+footer small {
+    color: #cdb3bc;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .contenedor-flores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-busqueda {
+        flex-wrap: wrap;
+    }
+
+    .campo-busqueda {
+        flex: 1 1 100%;
+    }
+
+    .form-busqueda select,
+    .btn-buscar {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        min-height: 380px;
+    }
+
+    .encabezado h1 {
+        font-size: 42px;
+    }
+
+    .encabezado p {
+        font-size: 18px;
+    }
+
+    main {
+        width: 94%;
+        padding-top: 35px;
+    }
+
+    .buscador {
+        padding: 22px;
+    }
+
+    .form-busqueda {
+        flex-direction: column;
+    }
+
+    .campo-busqueda,
+    .form-busqueda select,
+    .btn-buscar {
+        width: 100%;
+        flex: none;
+    }
+
+    .titulo-catalogo {
+        gap: 10px;
+    }
+
+    .titulo-catalogo > span {
+        font-size: 18px;
+    }
+
+    .titulo-catalogo h2 {
+        font-size: 27px;
+    }
+
+    .contenedor-flores {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-flor {
+        height: 280px;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-contenido {
+        padding: 28px 20px;
+        max-height: 94vh;
+    }
+
+    .acciones-formulario {
+        flex-direction: column-reverse;
+    }
+
+    .btn-cancelar,
+    .btn-guardar {
+        width: 100%;
+    }
+}
