@@ -302,7 +302,7 @@ $errores = $errores ?? [];
             </div>
 
 
-            <form method="POST" action="index.php" class="form-registro">
+            <form method="POST" action="index.php" class="form-registro" enctype="multipart/form-data">
 
                 <div class="grupo-campo">
 
@@ -393,24 +393,16 @@ $errores = $errores ?? [];
 
 
                 <div class="grupo-campo">
-
-                    <label for="imagen">
-                        Nombre de la imagen
-                    </label>
-
-                    <input
-                        type="text"
-                        id="imagen"
-                        name="imagen"
-                        placeholder="Ejemplo: margaritas.jpg"
-                        required
-                    >
-
-                    <small>
-                        Escribe el nombre exacto de la imagen ubicada en la carpeta img.
-                    </small>
-
-                </div>
+    <label for="imagen">Imagen de la flor</label>
+    <input
+        type="file"
+        id="imagen"
+        name="imagen"
+        accept=".jpg,.jpeg,.png,.webp"
+        required
+    >
+    <small>Selecciona una imagen desde tu computadora.</small>
+</div>
 
 
                 <div class="acciones-formulario">
@@ -418,15 +410,13 @@ $errores = $errores ?? [];
                     <button
                         type="button"
                         class="btn-cancelar"
-                        id="cancelarFormulario"
-                    >
+                        id="cancelarFormulario">
                         Cancelar
                     </button>
 
                     <button
                         type="submit"
-                        class="btn-guardar"
-                    >
+                        class="btn-guardar" >
                         🌸 Registrar flor
                     </button>
 
